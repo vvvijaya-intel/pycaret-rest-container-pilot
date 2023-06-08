@@ -1,0 +1,7 @@
+_minted-*
+_static/
+_templates/
+doctrees/
+html/
+*.pdf
+*.html

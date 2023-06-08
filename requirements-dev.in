@@ -1,0 +1,8 @@
+# This file specifies the dependencies that are needed to run tests for this
+# project and additional constraints. When you update this file, run `tox -e
+# pip-compile` to automatically update `requirements.txt`.
+
+# Testing
+pytest
+pytest-env
+pytest-xdist

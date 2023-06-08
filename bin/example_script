@@ -1,0 +1,17 @@
+#!/p/dpg/arch/perfhome/python/miniconda3/bin/python -E
+"""Example Python script."""
+
+import logging as log
+import os
+import sys
+
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+sys.path.insert(0, ROOT)
+
+
+def main(args):
+    log.info("Python boilerplate")
+
+
+if __name__ == '__main__':
+    main(sys.argv[1:])

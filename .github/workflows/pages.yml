@@ -1,0 +1,25 @@
+name: Pages
+
+on:
+  push:
+    branches:
+    - main
+
+env:
+  GHP_IMPORT: /p/dpg/arch/perfhome/python/miniconda/bin/ghp-import
+
+jobs:
+  pages:
+    runs-on: [self-hosted, ec]
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      # Need full history for version detection
+      with:
+        fetch-depth: 0
+    - name: Render
+      run: make docs
+    - name: Publish
+      run: ${GHP_IMPORT} --no-jekyll --push --force docs/html
+
+# vim: ts=2:sw=2
